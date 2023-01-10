@@ -5,6 +5,7 @@ import { BehaviorSubject, throwError } from "rxjs";
 import { User } from "./user.model";
 import { Router } from "@angular/router";
 import { environment } from "src/environments/environment";
+import { ShoppingListService } from "../shopping-list/shopping-list.service";
 
 export interface AuthResponceData{
   kind: string;
@@ -23,7 +24,8 @@ export class AuthService{
   tokenExpirationTimer: any;
 
   constructor(private http: HttpClient,
-              private router: Router) {}
+              private router: Router,
+              private slService: ShoppingListService) {}
 
   signUp(email: string, password: string){
     return this.http.post<AuthResponceData>
@@ -77,6 +79,7 @@ export class AuthService{
          new Date().getTime();
       this.autoLogout(expirationDuration);
     }
+
   }
 
   logout() {
@@ -126,7 +129,6 @@ export class AuthService{
             break;
         }
         return throwError(errorMessage);
-
   }
 
 }

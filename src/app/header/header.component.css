@@ -1,0 +1,15 @@
+.dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40%);
+  transition: all .7s;
+}
+
+.dropdown:hover {background-color: #e7e7e7;}
+
+.dropdown:hover .dropdown-menu{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-5%);
+}

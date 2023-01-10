@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+.content {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    margin-top: -1rem;
+    margin-left: 8rem;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+}
+
+h2 {
+    letter-spacing: -1.5px;
+}
+
+.content h2 {
+	color: #fff;
+	font-size: 1.5em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 1.5px rgb(51, 122, 183);
+}
+
+.content h2:nth-child(2) {
+	color: #03a9f4;
+	animation: animate 2s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+/* .content span {
+    position: relative;
+    display: inline-block;
+    animation: amimation 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+  }
+  @keyframes amimation {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-10px)
+    }
+  } */

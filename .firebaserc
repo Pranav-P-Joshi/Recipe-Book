@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "ng-recipe-book-f93ba"
+    "default": "recipesbook05"
+  },
+  "targets": {
+    "recipesbook05": {
+      "hosting": {
+        "Recipe-Book": [
+          "recipesbook05"
+        ]
+      }
+    }
   }
 }

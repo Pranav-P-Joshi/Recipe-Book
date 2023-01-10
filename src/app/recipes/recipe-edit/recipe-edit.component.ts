@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Form, FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Route, Router } from '@angular/router';
 import { RecipeService } from '../recipe.service';
 
@@ -17,7 +17,6 @@ export class RecipeEditComponent implements OnInit {
 
   constructor(private recipeService: RecipeService,
               private route: ActivatedRoute,
-              private fb: FormBuilder,
               private router: Router) {
 
               }

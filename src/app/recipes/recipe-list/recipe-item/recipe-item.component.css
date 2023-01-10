@@ -1,0 +1,30 @@
+img {
+  transition: all 0.3s linear;
+  aspect-ratio: 1/1;
+  background-size: cover;
+}
+a:hover img {
+  transform: scale(1.2);
+}
+/* #p{
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  top: 22px;
+} */
+
+/* h4{
+  transition: all .3s linear;
+}
+a:hover h4{
+  transform: scale(1.1);
+}
+
+
+
+p{
+  transition: all .3s linear;
+}
+a:hover p{
+  transform: scale(1.1);
+} */

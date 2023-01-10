@@ -27,6 +27,7 @@ export class AuthComponent implements OnDestroy{
 
 
   onSwitchMode(){
+
     this.isLoginMode = !this.isLoginMode;
   }
 

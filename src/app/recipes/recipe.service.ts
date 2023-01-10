@@ -4,12 +4,17 @@ import { Subject } from 'rxjs';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import { AuthService } from '../auth/auth.service';
 
 @Injectable()
 export class RecipeService {
+
+  constructor(private slService: ShoppingListService,
+              private authService: AuthService) {}
+
   recipeChanged = new Subject<Recipe[]>();
 
-     private recipes: Recipe[] = [];
+  private recipes: Recipe[] = [];
 
   // private recipes: Recipe[] = [
   //   new Recipe(
@@ -31,7 +36,10 @@ export class RecipeService {
   //     ])
   // ];
 
-  constructor(private slService: ShoppingListService) {}
+
+  get token(): string | null {
+    throw new Error('Method not implemented.');
+  }
 
   setRecipes(recipes: Recipe[]) {
     this.recipes = recipes;
@@ -39,6 +47,7 @@ export class RecipeService {
   }
 
   getRecipes() {
+    // localStorage.setItem('userRecipe', JSON.stringify(Recipe));
     return this.recipes.slice();
   }
 
@@ -62,6 +71,7 @@ export class RecipeService {
   deleteRecipe(index: number){
     this.recipes.splice(index, 1);
     this.recipeChanged.next(this.recipes.slice());
-
   }
+
+
 }

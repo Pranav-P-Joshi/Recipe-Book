@@ -5,9 +5,9 @@
 /tmp
 /out-tsc
 /bazel-out
-/.angular
-/.firebase
-/.github
+.angular/
+.firebase/
+.github/
 
 # Node
 /node_modules
@@ -43,3 +43,8 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

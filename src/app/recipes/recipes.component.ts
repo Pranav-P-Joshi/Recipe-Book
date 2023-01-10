@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecipeService } from './recipe.service';
+// import { RecipeService } from './recipe.service';
 
 @Component({
   selector: 'app-recipes',
@@ -8,11 +8,14 @@ import { RecipeService } from './recipe.service';
 
 })
 export class RecipesComponent implements OnInit {
+  // divElement: any;
 
   constructor() { }
 
   ngOnInit() {
-
+    // let divElement = document.getElementById('recipe-detail');
+    // console.log(divElement)
+    // let elHeight = this.divElement.clientHeight;
+    // console.log(elHeight)
   }
-
 }
